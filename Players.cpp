@@ -59,8 +59,13 @@ void Players:: checkWin() {
 	
 }
 
-void Players:: addPlayers() {
-	
+bool Players:: checkWin() {
+	if (this->getPieces() == 0) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 
 int Players::getStart(){
