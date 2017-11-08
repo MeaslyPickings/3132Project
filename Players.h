@@ -5,10 +5,11 @@ using namespace std;
 #define PLAYERS_H
 #include "Board.h"
 
-class Players: public Board {
+class Players:public Board {
 	protected:
 		int name; 
-		int pointer;
+		int start;
+		int finish;
 		int turn;
 		int pieces;
 	public:
@@ -20,8 +21,9 @@ class Players: public Board {
 		void setName(int name);
 		int getName();
 		
-		void setPointer(int pointer);
-		int getPointer();
+	
+		int getStart();
+		int getFinish();
 
 		void setTurn(int turn);
 		int getTurn();
@@ -29,7 +31,7 @@ class Players: public Board {
 		void setPieces(int pieces);
 		int getPieces();
 
-		bool checkWin();
+		void checkWin();
 		void addPlayers();
 
 };
