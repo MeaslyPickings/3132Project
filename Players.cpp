@@ -55,10 +55,6 @@ int Players:: getPieces() {
 	return this->pieces;
 }
 
-void Players:: checkWin() {
-	
-}
-
 bool Players:: checkWin() {
 	if (this->getPieces() == 0) {
 		return true;

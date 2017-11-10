@@ -31,7 +31,7 @@ class Players:public Board {
 		void setPieces(int pieces);
 		int getPieces();
 
-		void checkWin();
+		bool checkWin();
 		void addPlayers();
 
 };

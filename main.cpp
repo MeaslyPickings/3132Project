@@ -1,6 +1,7 @@
 
 #include "Board.h"
 #include "Players.h"
+#include "Dice.h"
 #include <iostream>
 using namespace std;
 

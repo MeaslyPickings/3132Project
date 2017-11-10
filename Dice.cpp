@@ -1,9 +1,15 @@
 #include "Dice.h"
-#include<random>
+#include<cstdlib>
+#include<ctime>
+
 
 using namespace std;
 
+Dice::Dice(){
+	srand(time(0));
+	random = rand()%6;
+}
 int Dice::roll(){
-	int random = rand()%6;
+	random = rand()%6;
 	return number[random];
 }
