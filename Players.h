@@ -5,7 +5,7 @@ using namespace std;
 #define PLAYERS_H
 #include "Board.h"
 
-class Players:public Board {
+class Players {
 	protected:
 		int name; 
 		int start;
@@ -15,8 +15,7 @@ class Players:public Board {
 	public:
 		Players();
 		Players(int name);
-
-	
+		
 
 		void setName(int name);
 		int getName();

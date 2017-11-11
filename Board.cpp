@@ -57,3 +57,12 @@ void Board:: print() {
 void Board::add(int i, int e){
 	array[i] = e;
 }
+
+// void Board::addPlayer(Player p) {
+	
+// }
+
+
+
+
+

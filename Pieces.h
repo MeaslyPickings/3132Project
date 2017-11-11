@@ -2,7 +2,7 @@
 #define PIECES_H
 #include "Players.h"
 
-class Pieces: public Players{
+class Pieces {
 protected:
 	int colour;
 public:

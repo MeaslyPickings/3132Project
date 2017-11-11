@@ -11,16 +11,28 @@ int main(void) {
 
 	Board *b = new Board();
 	Players *d = new Dice();
-	Players *p1 =new Move(1);
-	Players *p2 =new Move(2);
+	// Players *p1 =new Move(1);
+	// Players *p2 =new Move(2);
 
-	p2->startGame();
-	p1->startGame();
-	p1->print();
+	// p2->startGame();
+	// p1->startGame();
+
+	// p1->print();
+
 	int roll = d->roll();
+
 	cout<<roll<<endl;
-	p2->print();
-	b->print();
+
+	// p2->print();
+	// b->print();
+	
+
+	// demo
+	// short choice;
+	// cout << "Welcome" << ;
+	// while (true) {
+
+	// }
 
 	//b->print();
 	// int array[16];

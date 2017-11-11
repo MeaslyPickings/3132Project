@@ -1,4 +1,5 @@
 
+#include "Players.h"
 #ifndef BOARD_H
 #define BOARD_H
 
@@ -10,7 +11,9 @@ class Board {
 		Board();
 		~Board();
 		void add(int i, int e);
-		virtual void print();
+		// void addPlayer(Player p);
+
+		void print();
 };
 
 
