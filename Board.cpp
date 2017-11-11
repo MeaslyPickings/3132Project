@@ -6,6 +6,9 @@ using namespace std;
 Board:: Board() {
 	this->size = 25;
 	array = new int[size];
+	for (int i = 0; i <= 15; i++) {
+		array[i] = 0;
+	}
 }
 
 Board:: ~Board() {
@@ -13,17 +16,6 @@ Board:: ~Board() {
 }
 
 void Board:: print() {
-	for (int i = 0; i <= 15; i++) {
-		array[i] = 0;
-	}
-	array[1] = 2;
-	array[2] = 1;
-	array[5] = 2;
-	array[6] = 1;
-	array[9] = 2;
-	array[10] = 1;
-	array[13] = 2;
-	array[14] = 1;
 	for (int i = 8; i < 13; i++) {
 		if(array[i] == 0){
 			cout << "|   |";
@@ -60,4 +52,8 @@ void Board:: print() {
 		}
 	}
 	cout << endl;
+}
+
+void Board::add(int i, int e){
+	array[i] = e;
 }

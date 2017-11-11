@@ -2,6 +2,7 @@
 
 using namespace std;
 
+
 void Pieces::setColour(int c){
 	this->colour = c;
 }

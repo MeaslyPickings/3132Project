@@ -9,7 +9,8 @@ class Board {
 	public:
 		Board();
 		~Board();
-		void print();
+		void add(int i, int e);
+		virtual void print();
 };
 
 

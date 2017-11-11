@@ -1,14 +1,28 @@
-
 #include "Board.h"
 #include "Players.h"
 #include "Dice.h"
+#include "Move.h"
+#include "Pieces.h"
 #include <iostream>
+
 using namespace std;
 
 int main(void) {
 
 	Board *b = new Board();
+	Players *d = new Dice();
+	Players *p1 =new Move(1);
+	Players *p2 =new Move(2);
+
+	p2->startGame();
+	p1->startGame();
+	p1->print();
+	int roll = d->roll();
+	cout<<roll<<endl;
+	p2->print();
 	b->print();
+
+	//b->print();
 	// int array[16];
 	// for (int i = 0; i <= 15; i++) {
 	// 	array[i] = i;

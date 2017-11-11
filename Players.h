@@ -16,7 +16,7 @@ class Players:public Board {
 		Players();
 		Players(int name);
 
-		~Players();
+	
 
 		void setName(int name);
 		int getName();
@@ -33,6 +33,14 @@ class Players:public Board {
 
 		bool checkWin();
 		void addPlayers();
+
+		void print();
+
+		virtual int roll(){};
+		virtual void move(int amount){};
+		virtual void startGame(){};
+		virtual bool finished(int num){};
+
 
 };
 
