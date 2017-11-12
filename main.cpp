@@ -8,9 +8,17 @@
 using namespace std;
 
 int main(void) {
+	Players p1 = Players(1);
+	Players p2 = Players(2);
 
-	Board *b = new Board();
-	Players *d = new Dice();
+	Board *b = new Board(p1,p2);
+
+	b->startGame(p1);
+	b->startGame(p2);
+
+	b->print();
+	// Board *b = new Board();
+	// Players *d = new Dice();
 	// Players *p1 =new Move(1);
 	// Players *p2 =new Move(2);
 
@@ -19,9 +27,9 @@ int main(void) {
 
 	// p1->print();
 
-	int roll = d->roll();
+	//int roll = d->roll();
 
-	cout<<roll<<endl;
+	//cout<<roll<<endl;
 
 	// p2->print();
 	// b->print();

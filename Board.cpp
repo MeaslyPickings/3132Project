@@ -1,12 +1,35 @@
-
 #include "Board.h"
 #include <iostream>
 using namespace std;
 
-Board:: Board() {
-	this->size = 25;
+Board:: Board(Players p1,Players p2) {
+	this->player1 = &p1;
+	this->player2 = &p2;
+	this->size = 16;
 	array = new int[size];
-	for (int i = 0; i <= 15; i++) {
+	for (int i = 0; i < size; i++) {
+		array[i] = 0;
+	}
+}
+
+Board:: Board(Players p1,Players p2,Players p3) {
+	this->player1 = &p1;
+	this->player2 = &p2;
+	this->player3 = &p3;
+	this->size = 16;
+	array = new int[size];
+	for (int i = 0; i < size; i++) {
+		array[i] = 0;
+	}
+}
+Board:: Board(Players p1,Players p2,Players p3,Players p4) {
+	this->player1 = &p1;
+	this->player2 = &p2;
+	this->player3 = &p3;
+	this->player4 = &p4;
+	this->size = 16;
+	array = new int[size];
+	for (int i = 0; i < size; i++) {
 		array[i] = 0;
 	}
 }
@@ -14,6 +37,53 @@ Board:: Board() {
 Board:: ~Board() {
 
 }
+int Board::getPosition(Players p){
+	int position = -1;
+	for (int i = 0; i < 16; i++) {
+		if (array[i] == p.getPieces().getPlayer()) {
+			position = array[i];
+		}
+	}
+	return position;
+}
+void Board::addPlayer(Players p,int i) {
+	array[i] = p.getName();
+}
+
+
+bool Board::isFinished(Players p){
+
+}
+
+bool Board::jump(int newIndex){
+
+}
+
+void Board::move(Players p){
+	int oldPos;
+}
+
+void Board::startGame(Players p){
+	int start = p.getStart();
+	this->addPlayer(p,start);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 void Board:: print() {
 	for (int i = 8; i < 13; i++) {
@@ -53,16 +123,3 @@ void Board:: print() {
 	}
 	cout << endl;
 }
-
-void Board::add(int i, int e){
-	array[i] = e;
-}
-
-// void Board::addPlayer(Player p) {
-	
-// }
-
-
-
-
-

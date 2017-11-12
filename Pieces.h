@@ -1,14 +1,17 @@
 #ifndef PIECES_H
 #define PIECES_H
-#include "Players.h"
+//#include "Players.h"
 
 class Pieces {
 protected:
-	int colour;
+	int player;
+	int amount;
 public:
-	void setColour(int c);
-	int getColour();
-	int getPosition(Players player);
+	Pieces(int name);
+	void setPlayer(int n);
+	int getPlayer();
+	int getAmount();
+	void setAmount(int x);
 
 };
 #endif

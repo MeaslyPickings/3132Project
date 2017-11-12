@@ -5,7 +5,7 @@
 Players:: Players() {
 	this->name = 0;
 	this->turn = 0;
-	this->pieces = 4;
+	p = new Pieces(name);
 }
 
 Players:: Players(int name) {
@@ -26,7 +26,7 @@ Players:: Players(int name) {
 		start = 14;
 		finish = 13;
 	}
-	this->pieces = 4;
+	p = new Pieces(name);
 }
 
 
@@ -63,16 +63,12 @@ int Players:: getTurn() {
 	return this->turn;
 }
 
-void Players:: setPieces(int pieces) {
-	this->pieces = pieces;
-}
-
-int Players:: getPieces() {
-	return this->pieces;
+Pieces Players:: getPieces() {
+	return *p;
 }
 
 bool Players:: checkWin() {
-	if (this->getPieces() == 0) {
+	if (this->getPieces().getAmount() == 0) {
 		return true;
 	}
 	else {

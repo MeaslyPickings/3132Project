@@ -1,23 +1,26 @@
 #include"Pieces.h"
 #include "Players.h"
+#include "Board.h"
 using namespace std;
 
 
-void Pieces::setColour(int c){
-	this->colour = c;
+
+Pieces::Pieces(int name){
+	this->amount = 4;
+	this->player = name;
+}
+void Pieces::setPlayer(int n){
+	this->player = n;
 }
 
-int Pieces::getColour(){
-	return this->colour;
+int Pieces::getPlayer(){
+	return this->player;
 }
 
-// int Pieces::getPosition(Players player) {
-// 	int position = -1;
-// 	for (int i = 0; i < 16; i++) {
-// 		if (array[i] == player.getPieces() && 
-// 			player.getName() == player.getPieces()) {
-// 			position = array[i];
-// 		}
-// 	}
-// 	return position;
-// }
+int Pieces::getAmount(){
+	return amount;
+}
+
+void Pieces::setAmount(int x){
+	this->amount = x;
+}

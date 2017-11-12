@@ -1,9 +1,9 @@
 
-#include <iostream>
-using namespace std;
 #ifndef PLAYERS_H
 #define PLAYERS_H
-#include "Board.h"
+#include <iostream>
+using namespace std;
+#include "Pieces.h"
 
 class Players {
 	protected:
@@ -11,7 +11,8 @@ class Players {
 		int start;
 		int finish;
 		int turn;
-		int pieces;
+		Pieces *p;
+		//Board *b;
 	public:
 		Players();
 		Players(int name);
@@ -27,18 +28,13 @@ class Players {
 		void setTurn(int turn);
 		int getTurn();
 
-		void setPieces(int pieces);
-		int getPieces();
+		void setPieces(Pieces p);
+		Pieces getPieces();
 
 		bool checkWin();
 		void addPlayers();
 
 		void print();
-
-		virtual int roll(){};
-		virtual void move(int amount){};
-		virtual void startGame(){};
-		virtual bool finished(int num){};
 
 
 };
