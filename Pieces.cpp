@@ -3,7 +3,10 @@
 #include "Board.h"
 using namespace std;
 
-
+Pieces::Pieces(){
+	this->amount = 0;
+	this->player = 0;
+}
 
 Pieces::Pieces(int name){
 	this->amount = 4;

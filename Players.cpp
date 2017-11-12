@@ -1,5 +1,6 @@
 #include "Players.h"
 #include "Board.h"
+#include "Pieces.h"
 #include <iostream>
 
 Players:: Players() {
@@ -63,7 +64,7 @@ int Players:: getTurn() {
 	return this->turn;
 }
 
-Pieces Players:: getPieces() {
+Pieces Players::getPieces() {
 	return *p;
 }
 
@@ -81,6 +82,13 @@ int Players::getStart(){
 }
 int Players::getFinish(){
 	return finish;
+}
+
+void Players::setPlaceBack(bool i){
+	this->placeBack = i;
+}
+bool Players::getPlaceBack(){
+	return placeBack;
 }
 // void Players::print(){
 // 	for (int i = 8; i < 13; i++) {

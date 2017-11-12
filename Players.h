@@ -11,6 +11,7 @@ class Players {
 		int start;
 		int finish;
 		int turn;
+		bool placeBack = false;
 		Pieces *p;
 		//Board *b;
 	public:
@@ -33,6 +34,9 @@ class Players {
 
 		bool checkWin();
 		void addPlayers();
+
+		void setPlaceBack(bool i);
+		bool getPlaceBack();
 
 		void print();
 

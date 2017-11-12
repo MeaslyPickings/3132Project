@@ -2,10 +2,11 @@
 #ifndef BOARD_H
 #define BOARD_H
 #include "Players.h"
+#include "Pieces.h"
 
 class Board {
 	protected:
-		int *array;
+		Pieces *array;
 		int size;
 		Players *player1;
 		Players *player2;
@@ -17,12 +18,14 @@ class Board {
 		Board(Players p1,Players p2,Players p3);
 		Board(Players p1,Players p2,Players p3,Players p4);
 		~Board();
+
+		Players findPlayer(int name);
 		void addPlayer(Players p,int i);
 		int getPosition(Players p);
 		void startGame(Players p);
 		bool isFinished(Players p);
 		bool jump(int newIndex);
-		void move(Players p);
+		void move(Players p,int roll);
 
 		void print();
 };

@@ -13,10 +13,40 @@ int main(void) {
 
 	Board *b = new Board(p1,p2);
 
+	Dice d = Dice();
+
 	b->startGame(p1);
 	b->startGame(p2);
-
 	b->print();
+	int roll = d.roll();
+	cout<<roll<<endl;
+	b->move(p1,roll);
+	b->print();
+	roll = d.roll();
+	cout<<roll<<endl;
+	b->move(p2,roll);
+	b->print();
+	roll = d.roll();
+	cout<<roll<<endl;
+	b->move(p1,roll);
+	b->print();
+	roll = d.roll();
+	cout<<roll<<endl;
+	b->move(p2,roll);
+	b->print();
+	roll = d.roll();
+	cout<<roll<<endl;
+	b->move(p1,roll);
+	b->print();
+	roll = d.roll();
+	cout<<roll<<endl;
+	b->move(p2,roll);
+	b->print();
+	roll = d.roll();
+	cout<<roll<<endl;
+	b->move(p1,roll);
+	b->print();
+
 	// Board *b = new Board();
 	// Players *d = new Dice();
 	// Players *p1 =new Move(1);

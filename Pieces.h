@@ -1,12 +1,13 @@
 #ifndef PIECES_H
 #define PIECES_H
-//#include "Players.h"
+
 
 class Pieces {
 protected:
 	int player;
 	int amount;
 public:
+	Pieces();
 	Pieces(int name);
 	void setPlayer(int n);
 	int getPlayer();
